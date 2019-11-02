@@ -10,25 +10,36 @@ import XCTest
 @testable import KeychainWrapperDemo
 
 class KeychainWrapperDemoTests: XCTestCase {
+    
+    var sut: KeychainWrapper!
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        sut = KeychainWrapper(service: "myApp")
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testCreatesPassword() {
+        XCTAssert(sut.set("pass", forKey: "user"))
+        XCTAssert(sut.get(stringForKey: "user") == "pass")
+    }
+    
+    func testUpdatesPassword() {
+        XCTAssert(sut.set("pass", forKey: "user"))
+        XCTAssert(sut.get(stringForKey: "user") == "pass")
+
+        XCTAssert(sut.set("pass2", forKey: "user"))
+        XCTAssert(sut.get(stringForKey: "user") == "pass2")
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testRetrievesPassword() {
+        XCTAssert(sut.set("pass", forKey: "user"))
+        XCTAssert(sut.get(stringForKey: "user") == "pass")
     }
-
+    
+    func testDeletesPassword() {
+        XCTAssert(sut.del(valueForKey: "user"))
+    }
 }

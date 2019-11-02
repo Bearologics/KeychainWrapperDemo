@@ -14,6 +14,7 @@
 		071D6F31236D7B190069F5F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 071D6F30236D7B190069F5F4 /* Assets.xcassets */; };
 		071D6F34236D7B190069F5F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071D6F32236D7B190069F5F4 /* LaunchScreen.storyboard */; };
 		071D6F3F236D7B190069F5F4 /* KeychainWrapperDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071D6F3E236D7B190069F5F4 /* KeychainWrapperDemoTests.swift */; };
+		071D6F4A236D7B320069F5F4 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071D6F49236D7B320069F5F4 /* KeychainWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		071D6F3A236D7B190069F5F4 /* KeychainWrapperDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeychainWrapperDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		071D6F3E236D7B190069F5F4 /* KeychainWrapperDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapperDemoTests.swift; sourceTree = "<group>"; };
 		071D6F40236D7B190069F5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		071D6F49236D7B320069F5F4 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		071D6F26236D7B150069F5F4 /* KeychainWrapperDemo */ = {
 			isa = PBXGroup;
 			children = (
+				071D6F49236D7B320069F5F4 /* KeychainWrapper.swift */,
 				071D6F27236D7B150069F5F4 /* AppDelegate.swift */,
 				071D6F29236D7B150069F5F4 /* SceneDelegate.swift */,
 				071D6F2B236D7B150069F5F4 /* ViewController.swift */,
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				071D6F2C236D7B150069F5F4 /* ViewController.swift in Sources */,
+				071D6F4A236D7B320069F5F4 /* KeychainWrapper.swift in Sources */,
 				071D6F28236D7B150069F5F4 /* AppDelegate.swift in Sources */,
 				071D6F2A236D7B150069F5F4 /* SceneDelegate.swift in Sources */,
 			);
