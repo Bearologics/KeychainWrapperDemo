@@ -6,6 +6,7 @@
 //  Copyright © 2019 Bearologics UG (haftungsbeschränkt). All rights reserved.
 //
 
+import KeychainWrapper
 import UIKit
 
 class ViewController: UIViewController {
@@ -53,7 +54,7 @@ class ViewController: UIViewController {
             resultLabel.text = "Please enter username"
             return
         }
-        if keychainWrapper.del(valueForKey: username) {
+        if keychainWrapper.remove(valueForKey: username) {
             resultLabel.text = "Password deleted successfully"
         } else {
             resultLabel.text = "Could not delete password. Not existing?"

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,7 @@
 		071D6F31236D7B190069F5F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 071D6F30236D7B190069F5F4 /* Assets.xcassets */; };
 		071D6F34236D7B190069F5F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071D6F32236D7B190069F5F4 /* LaunchScreen.storyboard */; };
 		071D6F3F236D7B190069F5F4 /* KeychainWrapperDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071D6F3E236D7B190069F5F4 /* KeychainWrapperDemoTests.swift */; };
-		071D6F4A236D7B320069F5F4 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071D6F49236D7B320069F5F4 /* KeychainWrapper.swift */; };
+		2AC6983727A0095C003FFEFD /* KeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 2AC6983627A0095C003FFEFD /* KeychainWrapper */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 		071D6F3A236D7B190069F5F4 /* KeychainWrapperDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeychainWrapperDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		071D6F3E236D7B190069F5F4 /* KeychainWrapperDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapperDemoTests.swift; sourceTree = "<group>"; };
 		071D6F40236D7B190069F5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		071D6F49236D7B320069F5F4 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AC6983727A0095C003FFEFD /* KeychainWrapper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +81,6 @@
 		071D6F26236D7B150069F5F4 /* KeychainWrapperDemo */ = {
 			isa = PBXGroup;
 			children = (
-				071D6F49236D7B320069F5F4 /* KeychainWrapper.swift */,
 				071D6F27236D7B150069F5F4 /* AppDelegate.swift */,
 				071D6F29236D7B150069F5F4 /* SceneDelegate.swift */,
 				071D6F2B236D7B150069F5F4 /* ViewController.swift */,
@@ -118,6 +117,9 @@
 			dependencies = (
 			);
 			name = KeychainWrapperDemo;
+			packageProductDependencies = (
+				2AC6983627A0095C003FFEFD /* KeychainWrapper */,
+			);
 			productName = KeychainWrapperDemo;
 			productReference = 071D6F24236D7B150069F5F4 /* KeychainWrapperDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -147,7 +149,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1320;
 				ORGANIZATIONNAME = "Bearologics UG (haftungsbeschränkt)";
 				TargetAttributes = {
 					071D6F23236D7B150069F5F4 = {
@@ -168,6 +170,9 @@
 				Base,
 			);
 			mainGroup = 071D6F1B236D7B150069F5F4;
+			packageReferences = (
+				2AC6983527A0095C003FFEFD /* XCRemoteSwiftPackageReference "KeychainWrapper" */,
+			);
 			productRefGroup = 071D6F25236D7B150069F5F4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -204,7 +209,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				071D6F2C236D7B150069F5F4 /* ViewController.swift in Sources */,
-				071D6F4A236D7B320069F5F4 /* KeychainWrapper.swift in Sources */,
 				071D6F28236D7B150069F5F4 /* AppDelegate.swift in Sources */,
 				071D6F2A236D7B150069F5F4 /* SceneDelegate.swift in Sources */,
 			);
@@ -274,6 +278,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -334,6 +339,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -473,6 +479,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2AC6983527A0095C003FFEFD /* XCRemoteSwiftPackageReference "KeychainWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Bearologics/KeychainWrapper";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2AC6983627A0095C003FFEFD /* KeychainWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2AC6983527A0095C003FFEFD /* XCRemoteSwiftPackageReference "KeychainWrapper" */;
+			productName = KeychainWrapper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 071D6F1C236D7B150069F5F4 /* Project object */;
 }
